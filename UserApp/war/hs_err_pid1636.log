@@ -1,0 +1,182 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (sharedRuntime.cpp:665), pid=1636, tid=4508
+#  guarantee(false) failed: missing exception handler
+#
+# JRE version: 6.0_27-b07
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.2-b06 mixed mode windows-amd64 compressed oops)
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000009c4a000):  JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ 3STHuIc$`b4qMH(," daemon [_thread_in_vm, id=4508, stack(0x000000000f740000,0x000000000f840000)]
+
+Stack: [0x000000000f740000,0x000000000f840000]
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+v  ~ExceptionBlob
+J  java.net.SocketInputStream.read([BII)I
+J  java.io.BufferedInputStream.fill()V
+J  java.io.BufferedInputStream.read()I
+J  java.io.DataInputStream.readByte()B
+j  com.google.gwt.dev.shell.BrowserChannel$Message.readMessageType(Ljava/io/DataInputStream;)Lcom/google/gwt/dev/shell/BrowserChannel$MessageType;+6
+j  com.google.gwt.dev.shell.BrowserChannelServer.reactToMessages(Lcom/google/gwt/dev/shell/BrowserChannelServer$SessionHandlerServer;)V+11
+j  com.google.gwt.dev.shell.BrowserChannelServer.processConnection()V+877
+j  com.google.gwt.dev.shell.BrowserChannelServer.run()V+1
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000009c4b800 JavaThread "540103247@qtp-1017381056-22" [_thread_blocked, id=6972, stack(0x0000000007820000,0x0000000007920000)]
+  0x000000000822a800 JavaThread "1929248148@qtp-1017381056-21" [_thread_blocked, id=1476, stack(0x0000000010630000,0x0000000010730000)]
+  0x000000000822a000 JavaThread "783099971@qtp-1017381056-20" [_thread_blocked, id=8100, stack(0x0000000010530000,0x0000000010630000)]
+  0x0000000008229000 JavaThread "1803366205@qtp-1017381056-19" [_thread_blocked, id=7188, stack(0x0000000010430000,0x0000000010530000)]
+  0x0000000008228800 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ v$U[??'"56Q$a!4e" daemon [_thread_blocked, id=7180, stack(0x0000000010330000,0x0000000010430000)]
+  0x0000000008227000 JavaThread "250015132@qtp-1017381056-18" [_thread_blocked, id=2020, stack(0x0000000010230000,0x0000000010330000)]
+=>0x0000000009c4a000 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ 3STHuIc$`b4qMH(," daemon [_thread_in_vm, id=4508, stack(0x000000000f740000,0x000000000f840000)]
+  0x0000000008227800 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ @)\lBv+w=KTg:JvI" daemon [_thread_blocked, id=4148, stack(0x000000000ff30000,0x0000000010030000)]
+  0x0000000009c51800 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ cX,KG6#Lq1d*?a:x" daemon [_thread_blocked, id=4304, stack(0x000000000fc30000,0x000000000fd30000)]
+  0x0000000009c50800 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ '^vY^zeIWB>"\}Oh" daemon [_thread_blocked, id=7872, stack(0x000000000f840000,0x000000000f940000)]
+  0x0000000009c50000 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ i>GHlr&Q:_N$3m[J" daemon [_thread_blocked, id=3392, stack(0x000000000fb30000,0x000000000fc30000)]
+  0x0000000009c4e800 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ JSwL/'wILNnimx/I" daemon [_thread_blocked, id=6212, stack(0x000000000f640000,0x000000000f740000)]
+  0x0000000009c4f000 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ eI7,W-\5:Hi#oJ|T" daemon [_thread_blocked, id=7616, stack(0x000000000fd30000,0x000000000fe30000)]
+  0x0000000009c4e000 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ ]'}wHMs|kMb&Hf4T" daemon [_thread_blocked, id=4676, stack(0x000000000a6c0000,0x000000000a7c0000)]
+  0x0000000009c4b000 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ 84=ik?K$-s\#3;kZ" daemon [_thread_blocked, id=5388, stack(0x000000000f540000,0x000000000f640000)]
+  0x0000000009c4d000 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ ]vr0*~Y5G+Xym@7=" daemon [_thread_blocked, id=8068, stack(0x000000000fa30000,0x000000000fb30000)]
+  0x000000000bea0800 JavaThread "AWT-Windows" daemon [_thread_in_native, id=6812, stack(0x000000000a7c0000,0x000000000a8c0000)]
+  0x0000000008022800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=2656, stack(0x0000000009340000,0x0000000009440000)]
+  0x000000000656e000 JavaThread "Code server for userapp from Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; Media Center PC 6.0) on http://127.0.0.1:8888/UserApp.html?gwt.codesvr=127.0.0.1:9997 @ |C/Lg'dzEv!Yy,ya" daemon [_thread_blocked, id=7744, stack(0x0000000007620000,0x0000000007720000)]
+  0x0000000009748800 JavaThread "Timer-0" daemon [_thread_blocked, id=7240, stack(0x0000000009440000,0x0000000009540000)]
+  0x0000000007e00800 JavaThread "1318561708@qtp-1017381056-0 - Acceptor0 SelectChannelConnector@0.0.0.0:8888" [_thread_in_native, id=3064, stack(0x0000000007520000,0x0000000007620000)]
+  0x000000000679b000 JavaThread "com.google.gwt.thirdparty.guava.common.base.internal.Finalizer" daemon [_thread_blocked, id=5312, stack(0x0000000007a20000,0x0000000007b20000)]
+  0x00000000066b3000 JavaThread "Code server listener" daemon [_thread_in_native, id=6868, stack(0x0000000007920000,0x0000000007a20000)]
+  0x000000000656f800 JavaThread "UnitWriteThread" daemon [_thread_blocked, id=6596, stack(0x0000000007720000,0x0000000007820000)]
+  0x000000000659f800 JavaThread "Thread-2" daemon [_thread_blocked, id=6160, stack(0x0000000007420000,0x0000000007520000)]
+  0x0000000006669000 JavaThread "Thread-1" [_thread_in_native, id=6976, stack(0x00000000071b0000,0x00000000072b0000)]
+  0x00000000064e0800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=6408, stack(0x0000000006a70000,0x0000000006b70000)]
+  0x00000000064d9800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=7052, stack(0x0000000006970000,0x0000000006a70000)]
+  0x00000000064ca000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=7320, stack(0x0000000006870000,0x0000000006970000)]
+  0x00000000003c6000 JavaThread "Attach Listener" daemon [_thread_blocked, id=4932, stack(0x0000000006370000,0x0000000006470000)]
+  0x00000000060b0800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2428, stack(0x0000000006270000,0x0000000006370000)]
+  0x00000000003b2800 JavaThread "Finalizer" daemon [_thread_blocked, id=8184, stack(0x0000000005f70000,0x0000000006070000)]
+  0x00000000003a9800 JavaThread "Reference Handler" daemon [_thread_blocked, id=5176, stack(0x0000000005e70000,0x0000000005f70000)]
+  0x00000000005ee800 JavaThread "main" [_thread_blocked, id=7908, stack(0x0000000002400000,0x0000000002500000)]
+
+Other Threads:
+  0x00000000003a3000 VMThread [stack: 0x0000000005d70000,0x0000000005e70000] [id=7808]
+  0x00000000061ff800 WatcherThread [stack: 0x0000000006b70000,0x0000000006c70000] [id=7336]
+
+VM state:synchronizing (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000000005ecbe0] Threads_lock - owner thread: 0x00000000003a3000
+[0x00000000005ed0e0] Heap_lock - owner thread: 0x0000000009c4d000
+
+Heap
+ PSYoungGen      total 102528K, used 1318K [0x00000000f5560000, 0x00000000fc090000, 0x0000000100000000)
+  eden space 102464K, 1% used [0x00000000f5560000,0x00000000f56a9860,0x00000000fb970000)
+  from space 64K, 0% used [0x00000000fb970000,0x00000000fb970000,0x00000000fb980000)
+  to   space 3584K, 0% used [0x00000000fbd10000,0x00000000fbd10000,0x00000000fc090000)
+ PSOldGen        total 349568K, used 255245K [0x00000000e0000000, 0x00000000f5560000, 0x00000000f5560000)
+  object space 349568K, 73% used [0x00000000e0000000,0x00000000ef9437c0,0x00000000f5560000)
+ PSPermGen       total 83968K, used 83967K [0x00000000dae00000, 0x00000000e0000000, 0x00000000e0000000)
+  object space 83968K, 99% used [0x00000000dae00000,0x00000000dffffff0,0x00000000e0000000)
+
+Code Cache  [0x00000000026e0000, 0x0000000002d70000, 0x00000000056e0000)
+ total_blobs=1752 nmethods=1316 adapters=387 free_code_cache=43559872 largest_free_block=13120
+
+Dynamic libraries:
+0x0000000000400000 - 0x000000000042e000 	C:\Program Files\Java\jre6\bin\javaw.exe
+0x0000000076fb0000 - 0x0000000077159000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000076ae0000 - 0x0000000076bff000 	C:\Windows\system32\kernel32.dll
+0x000007fefc9a0000 - 0x000007fefca0c000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefd180000 - 0x000007fefd25b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefe370000 - 0x000007fefe40f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefe350000 - 0x000007fefe36f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefd2b0000 - 0x000007fefd3dd000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076eb0000 - 0x0000000076faa000 	C:\Windows\system32\USER32.dll
+0x000007fefe2e0000 - 0x000007fefe347000 	C:\Windows\system32\GDI32.dll
+0x000007fefcfd0000 - 0x000007fefcfde000 	C:\Windows\system32\LPK.dll
+0x000007fefd0b0000 - 0x000007fefd179000 	C:\Windows\system32\USP10.dll
+0x000007fefcfe0000 - 0x000007fefd00e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefe1d0000 - 0x000007fefe2d9000 	C:\Windows\system32\MSCTF.dll
+0x000000006d7f0000 - 0x000000006dfa8000 	C:\Program Files\Java\jre6\bin\server\jvm.dll
+0x000007fefa760000 - 0x000007fefa79b000 	C:\Windows\system32\WINMM.dll
+0x000000006d760000 - 0x000000006d76e000 	C:\Program Files\Java\jre6\bin\verify.dll
+0x000000006d3b0000 - 0x000000006d3d7000 	C:\Program Files\Java\jre6\bin\java.dll
+0x000000006d360000 - 0x000000006d380000 	C:\Program Files\Java\jre6\bin\instrument.dll
+0x000000006d7b0000 - 0x000000006d7c2000 	C:\Program Files\Java\jre6\bin\zip.dll
+0x000000006d600000 - 0x000000006d617000 	C:\Program Files\Java\jre6\bin\net.dll
+0x000007fefd260000 - 0x000007fefd2ad000 	C:\Windows\system32\WS2_32.dll
+0x000007fefccc0000 - 0x000007fefccc8000 	C:\Windows\system32\NSI.dll
+0x000007fefc120000 - 0x000007fefc175000 	C:\Windows\system32\mswsock.dll
+0x000007fefc110000 - 0x000007fefc117000 	C:\Windows\System32\wship6.dll
+0x000007fefbab0000 - 0x000007fefbab7000 	C:\Windows\System32\wshtcpip.dll
+0x000007fef86d0000 - 0x000007fef86fe000 	C:\Program Files\Common Files\Microsoft Shared\Windows Live\WLIDNSP.DLL
+0x0000000077170000 - 0x0000000077177000 	C:\Windows\system32\PSAPI.DLL
+0x000007fefd010000 - 0x000007fefd081000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefbfa0000 - 0x000007fefbffb000 	C:\Windows\system32\DNSAPI.dll
+0x000007fefa4a0000 - 0x000007fefa4c7000 	C:\Windows\system32\IPHLPAPI.DLL
+0x000007fefa480000 - 0x000007fefa48b000 	C:\Windows\system32\WINNSI.DLL
+0x000007fef8630000 - 0x000007fef8638000 	C:\Windows\system32\rasadhlp.dll
+0x000007fefa380000 - 0x000007fefa3d3000 	C:\Windows\System32\fwpuclnt.dll
+0x000007fefc180000 - 0x000007fefc197000 	C:\Windows\system32\CRYPTSP.dll
+0x000007fefbe80000 - 0x000007fefbec7000 	C:\Windows\system32\rsaenh.dll
+0x000007fefbbf0000 - 0x000007fefbc0e000 	C:\Windows\system32\USERENV.dll
+0x000007fefc8f0000 - 0x000007fefc8ff000 	C:\Windows\system32\profapi.dll
+0x000007fefc820000 - 0x000007fefc82f000 	C:\Windows\system32\CRYPTBASE.dll
+0x000007fefa990000 - 0x000007fefa9a5000 	C:\Windows\system32\NLAapi.dll
+0x000007fef27c0000 - 0x000007fef27d5000 	C:\Windows\system32\napinsp.dll
+0x000007fef27a0000 - 0x000007fef27b9000 	C:\Windows\system32\pnrpnsp.dll
+0x000007fef2790000 - 0x000007fef279b000 	C:\Windows\System32\winrnr.dll
+0x000000006d620000 - 0x000000006d62b000 	C:\Program Files\Java\jre6\bin\nio.dll
+0x000000006d000000 - 0x000000006d1c3000 	C:\Program Files\Java\jre6\bin\awt.dll
+0x000007fef9380000 - 0x000007fef93f1000 	C:\Windows\system32\WINSPOOL.DRV
+0x000007fefe590000 - 0x000007fefe793000 	C:\Windows\system32\ole32.dll
+0x000007fefd3e0000 - 0x000007fefe168000 	C:\Windows\system32\SHELL32.dll
+0x000007fefb350000 - 0x000007fefb544000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefaf20000 - 0x000007fefaf38000 	C:\Windows\system32\DWMAPI.DLL
+0x000007fefb000000 - 0x000007fefb056000 	C:\Windows\system32\uxtheme.dll
+0x000000006d2a0000 - 0x000000006d306000 	C:\Program Files\Java\jre6\bin\fontmanager.dll
+0x000007fef0ef0000 - 0x000007fef10ef000 	C:\Windows\system32\d3d9.dll
+0x000007fefb9e0000 - 0x000007fefb9ec000 	C:\Windows\system32\VERSION.dll
+0x000007fefaf80000 - 0x000007fefaf87000 	C:\Windows\system32\d3d8thk.dll
+0x000007feeacb0000 - 0x000007feeb8f1000 	C:\Windows\system32\nvd3dumx.dll
+0x000007fefb240000 - 0x000007fefb26c000 	C:\Windows\system32\powrprof.dll
+0x000007fefcdf0000 - 0x000007fefcfc7000 	C:\Windows\system32\SETUPAPI.dll
+0x000007fefcc60000 - 0x000007fefcc96000 	C:\Windows\system32\CFGMGR32.dll
+0x000007fefe410000 - 0x000007fefe4e7000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefcca0000 - 0x000007fefccba000 	C:\Windows\system32\DEVOBJ.dll
+
+VM Arguments:
+jvm_args: -Ddatastore.default_high_rep_job_policy_unapplied_job_pct=50 -Xmx512m -javaagent:D:\Eclipse\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.6.1.v201201120043r36\appengine-java-sdk-1.6.1\lib\agent\appengine-agent.jar -Dfile.encoding=UTF-8 
+java_command: com.google.gwt.dev.DevMode -remoteUI 55321:34768293018997 -startupUrl UserApp.html -logLevel INFO -codeServerPort 9997 -port 8888 -server com.google.appengine.tools.development.gwt.AppEngineLauncher -war D:\Eclipse\workspace\UserApp\war com.user.app.UserApp
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Java\jdk1.6.0_27
+CLASSPATH=.;C:\Program Files (x86)\Java\jre6\lib\ext\QTJava.zip
+PATH=C:\Perl64\site\bin;C:\Perl64\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Nokia\PC Connectivity Solution\;D:\oracle\app\oracle\product\10.2.0\server\bin;D:\Program Files (x86)\MiKTeX 2.7\miktex\bin;C:\PROGRA~2\Borland\CBUILD~1\Bin;C:\PROGRA~2\Borland\CBUILD~1\Projects\Bpl;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Samsung\Samsung PC Studio 3;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;d:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;D:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2009\XmlDataBinder7\Redist7\cpp\win32\bin;C:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2010\XmlDataBinder8\Redist8\cpp\win32\bin;D:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Windows Live\Shared;D:\Program Files (x86)\ImageConverter Plus;D:\Program Files (x86)\ImageConverter Plus\Microsoft.VC90.CRT;D:\Program Files (x86)\ImageConverter Plus\Microsoft.VC90.MFC;C:\Program Files (x86)\Java\jdk1.6.0_27\bin;D:\apache-maven-3.0.3\bin;
+USERNAME=Beata
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1
+
+Memory: 4k page, physical 4193524k(1104364k free), swap 8385200k(3738084k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (20.2-b06) for windows-amd64 JRE (1.6.0_27-b07), built on Jul 19 2011 01:08:22 by "java_re" with MS VC++ 8.0 (VS2005)
+
+time: Sun Jan 29 21:13:10 2012
+elapsed time: 1440 seconds
+
